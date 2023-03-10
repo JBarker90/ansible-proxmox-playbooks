@@ -2,15 +2,11 @@
 - hosts: all
   become: true
   tasks:
-    - name: Create a group for your user
-      ansible.builtin.group:
-        name: jonathan
-        state: present
-
     - name: Create your admin user with a home directory and default shell
       ansible.builtin.user:
         name: jonathan
-        groups: jonathan,sudo
+        groups: sudo
         create_home: true
         shell: /bin/bash
         append: yes
+        state: present
