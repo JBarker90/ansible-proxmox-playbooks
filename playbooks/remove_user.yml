@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Remove your user's group from target node
+      ansible.builtin.group:
+        name: jonathan
+        state: absent
+        remove: yes
+    
+    - name: Remove your User from target node
+      ansible.builtin.user:
+        name: jonathan
+        state: absent
+        remove: yes
