@@ -6,7 +6,6 @@
       ansible.builtin.group:
         name: jonathan
         state: absent
-        remove: yes
     
     - name: Remove your User from target node
       ansible.builtin.user:
