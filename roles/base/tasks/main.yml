@@ -1,0 +1,8 @@
+- name: Add sudoers files for users
+  template:
+    src: "{{ sudoers_template_file }}"
+    dest: /etc/sudoers
+    owner: root
+    group: root
+    mode: 440
+  notify: restart_sshd
