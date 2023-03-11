@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+  remote_user: root
+  pre_tasks:
+    - name: Update repo cache (AlmaLinux)
+      dnf:
+        update_cache: yes
+      changed_when: false
+      when: ansible_distribution == "AlmaLinux"
+
+    - name: Update repo cache (Ubuntu)
+      apt:
+        update_cache: yes
+      changed_when: false
+      when: ansible_distribution == "Ubuntu"
+
+- hosts: all
+  become: true
+  remote_user: root
+  roles:
+    - base
