@@ -14,3 +14,8 @@
     owner: "{{ target_user }}"
     group: "{{ target_user }}"
     mode: 0644
+
+- name: Add SSH Public Key for new user
+  authorized_key:
+    user: "{{ target_user }}"
+    key: "{{ local_pub_key }}"
