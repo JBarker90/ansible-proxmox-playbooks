@@ -5,7 +5,7 @@
   tasks:
     - name: Create your admin user with a home directory and default shell
       ansible.builtin.user:
-        name: jonathan
+        name: "{{ target_user }}"
         groups: sudo
         create_home: true
         shell: /bin/bash

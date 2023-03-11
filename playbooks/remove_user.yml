@@ -5,6 +5,6 @@
   tasks:  
     - name: Remove your User from target node
       ansible.builtin.user:
-        name: jonathan
+        name: "{{ target_user }}"
         state: absent
         remove: yes
