@@ -1,6 +1,7 @@
 ---
 - hosts: all
   become: true
+  remote_user: root
   tasks:
     - name: Remove your user's group from target node
       ansible.builtin.group:
