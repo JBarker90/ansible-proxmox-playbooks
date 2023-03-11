@@ -4,5 +4,13 @@
     dest: /etc/sudoers
     owner: root
     group: root
-    mode: 440
+    mode: 0440
   notify: restart_sshd
+
+- name: Add custom .bashrc for new user
+  template: 
+    src: "{{ bashrc_template_file }}"
+    dest: '/home/{{ target_user }}/.bashrc'
+    owner: "{{ target_user }}"
+    group: "{{ target_user }}"
+    mode: 0644
