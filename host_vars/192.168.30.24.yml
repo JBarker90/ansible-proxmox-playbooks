@@ -1,2 +1,3 @@
 target_user: jonathan
 sudoers_template_file: sudoers_ubuntu.j2
+bashrc_template_file: .bashrc_ubuntu.j2
