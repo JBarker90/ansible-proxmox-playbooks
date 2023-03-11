@@ -1,6 +1,7 @@
 ---
 - hosts: all
   become: true
+  remote_user: root
   tasks:
     - name: Create your admin user with a home directory and default shell
       ansible.builtin.user:
