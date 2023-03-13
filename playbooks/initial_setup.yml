@@ -20,3 +20,4 @@
   remote_user: root
   roles:
     - base
+    - packages
