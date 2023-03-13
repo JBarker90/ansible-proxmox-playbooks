@@ -1,0 +1,10 @@
+- name: Install various packages based on preference
+  package:
+    name: 
+      - vim
+      - atop
+      - htop
+      - ncdu
+      - screen
+      - nmap
+    state: latest
