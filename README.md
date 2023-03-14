@@ -7,15 +7,15 @@ You will need an SSH key configured on your Ansible controller. If you need to g
 - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 # Initial Setup Instructions
-### 1. Add the file path for your SSH Ansible Key (from your Ansible controller node) in `ansible.cfg`
+#### 1. Add the file path for your SSH Ansible Key (from your Ansible controller node) in `ansible.cfg`
 
 ```
 private_key_file = "~/.ssh/example_key"
 ```
 
-### 2. Add the target IPs to the `~/ansible-proxmox-playbooks/inventory` file that you want Ansible to change.
+#### 2. Add the target IPs to the `~/ansible-proxmox-playbooks/inventory` file that you want Ansible to change.
 
-### 3. Copy the example `example.yml` file located in `~/ansible-proxmox-playbooks/host_vars` and add your specific values for your target node you want to update.
+#### 3. Copy the example `example.yml` file located in `~/ansible-proxmox-playbooks/host_vars` and add your specific values for your target node you want to update.
 
 ```
 cp -av ~/ansible-proxmox-playbooks/host_vars/example.yml <destination_IP>.yml
@@ -36,25 +36,25 @@ NOTE: Make sure you use the template files specific to your distro (either AlmaL
 
 - Additionally, the `local_pub_key: ` is for a Public SSH key that you might use on your local machine (NOT related to Ansible) to log into servers.  
 
-### 4. Run `ping.yml` playbook to test connection.
+#### 4. Run `ping.yml` playbook to test connection.
 
 ```
 ansible-playbook playbooks/ping.yml
 ```
 
-### 5. Run `create_user.yml` playbook to create your new user that was configured in as `target_user: <username>` in `~/ansible-proxmox-playbooks/host_vars/<destination_IP>.yml`
+#### 5. Run `create_user.yml` playbook to create your new user that was configured in as `target_user: <username>` in `~/ansible-proxmox-playbooks/host_vars/<destination_IP>.yml`
 
 ```
 ansible-playbook playbooks/create_user.yml
 ```
 
-### 6. Run `initial_setup.yml` to configure `.bashrc` and install packages
+#### 6. Run `initial_setup.yml` to configure `.bashrc` and install packages
 
 ```
 ansible-playbook playbooks/initial_setup.yml
 ```
 
-### 7. (Optional) Run `remove_user.yml` if you would like to remove the user you configured.
+#### 7. (Optional) Run `remove_user.yml` if you would like to remove the user you configured.
 
 ```
 ansible-playbook playbooks/remove_user.yml
