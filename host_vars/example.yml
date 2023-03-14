@@ -1,0 +1,4 @@
+target_user: username
+local_pub_key: "<Enter public SSH key here>"
+sudoers_template_file: <sudoers_ubuntu.j2> | <sudoers_alma.j2>
+bashrc_template_file: <.bashrc_ubuntu.j2> | <.bashrc_alma.j2>
