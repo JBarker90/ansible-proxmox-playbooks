@@ -23,7 +23,7 @@ cp -av ~/ansible-proxmox-playbooks/host_vars/example.yml <destination_IP>.yml
 
 - Then, fill in the values in the host_vars file
 
-Example:
+- Example:
 
 ```
 target_user: admin
@@ -32,9 +32,9 @@ sudoers_template_file: sudoers_ubuntu.j2
 bashrc_template_file: .bashrc_ubuntu.j2
 ```
 
-NOTE: Make sure you use the template files specific to your distro (either AlmaLinux or Ubuntu). These can be found in `~/ansible-proxmox-playbooks/playbooks/roles/base/templates`.
+- NOTE: Make sure you use the template files specific to your distro (either AlmaLinux or Ubuntu). These can be found in `~/ansible-proxmox-playbooks/playbooks/roles/base/templates`.
 
-- Additionally, the `local_pub_key: ` is for a Public SSH key that you might use on your local machine (NOT related to Ansible) to log into servers.  
+    - Additionally, the `local_pub_key: ` is for a Public SSH key that you might use on your local machine (NOT related to Ansible) to log into servers.  
 
 4. Run `ping.yml` playbook to test connection.
 
