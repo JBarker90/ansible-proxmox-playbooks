@@ -21,8 +21,6 @@ private_key_file = "~/.ssh/example_key"
 cp -av ~/ansible-proxmox-playbooks/host_vars/example.yml <destination_IP>.yml
 ```
 
-- Then, fill in the values in the host_vars file
-
 - Example:
 
 ```
