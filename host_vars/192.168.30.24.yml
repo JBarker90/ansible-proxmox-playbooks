@@ -1,4 +1,0 @@
-target_user: jonathan
-local_pub_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGZpMkJYwwYhG12FgY2gITWlR1bBMmg/YeapMMLCF/iV Jonathan PC ssh key"
-sudoers_template_file: sudoers_ubuntu.j2
-bashrc_template_file: .bashrc_ubuntu.j2
