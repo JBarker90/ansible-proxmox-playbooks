@@ -18,7 +18,8 @@ private_key_file = "~/.ssh/example_key"
 3. Copy the example `example.yml` file located in `~/ansible-proxmox-playbooks/host_vars` and add your specific values for your target node you want to update.
 
 ```
-cp -av ~/ansible-proxmox-playbooks/host_vars/example.yml <destination_IP>.yml
+cd ~/ansible-proxmox-playbooks/host_vars/ 
+cp -av example.yml <destination_IP>.yml
 ```
 
 - Example:
