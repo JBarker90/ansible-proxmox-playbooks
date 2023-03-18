@@ -111,7 +111,7 @@ PLAY RECAP *********************************************************************
 
 # Notes
 
-- This will run the playbooks as root for the remote user. So you will need to verify that your Ansible SSH key is present in `~/.ssh/authorized_keys` for root. 
+- This will run the playbooks as root for the remote user. So you will need to verify that your Ansible SSH key is present in `~/.ssh/authorized_keys` for the root user on the target system. 
 
 - For security reasons, the `create_user.yml` playbook does NOT set a password. It will only configure an SSH key for your local machine to authenticate to your sudo user you create. If you want to set a sudo password, you will need to do it manually from your new server.
 
