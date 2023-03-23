@@ -1,7 +1,7 @@
 # Description
 This is a general repository for my Ansible playbooks for ProxMox VM/LXC setups.
 
-# Pre-Requirement
+# Prerequisites
 You will need an SSH key configured on your Ansible controller. If you need to generate one, you can follow the instructions here:
 
 - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
