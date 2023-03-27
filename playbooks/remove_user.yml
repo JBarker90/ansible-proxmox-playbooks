@@ -1,7 +1,6 @@
 ---
 - hosts: all
   become: true
-  remote_user: root
   tasks:  
     - name: Remove your User from target node
       ansible.builtin.user:
